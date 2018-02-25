@@ -16,3 +16,6 @@ def first_step():
     hdl = request.form['lipoproteins']
 
     return render_template('second-step.html')
+
+if __name__ == '__main__':
+    app.run()

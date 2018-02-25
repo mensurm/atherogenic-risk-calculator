@@ -2,4 +2,4 @@ from flask import Flask
 
 app = Flask(__name__)
 
-from atherogenic_risk import routes
+from atherogenic_risk import app
