@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+{% block body %}
+
+<form class="ui form" method="post" action="">
+  <div class="field">
+    <label>Total cholesterol</label>
+    <input type="number" name="cholesterol" placeholder="Enter cholesterol value" required>
+  </div>
+  <div class="field">
+    <label>Triglyceride</label>
+    <input type="number" name="triglyceride" placeholder="Enter triglyceride value" required>
+  </div>
+    <div class="field">
+        <label>High-density lipoproteins</label>
+        <input type="number" name="lipoproteins" placeholder="Enter lipoproteins value" required>
+    </div>
+
+  <button class="ui positive basic button" type="submit">Calculate</button>
+  <button class="ui black basic button" type="button">Clear</button>
+
+</form>
+
+{% endblock %}
