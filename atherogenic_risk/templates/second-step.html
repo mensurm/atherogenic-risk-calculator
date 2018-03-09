@@ -1,5 +1,69 @@
 {% extends "index.html" %}
 {% block body %}
 
+<div class="ui segment">
+    <div class="ui huge green header">{{form.ldl}}
+        <div class="sub header">
+            Low density lipoproteins
+        </div>
+    </div>
 
+    <div class="ui huge green header">
+        {{form.vldl}}
+        <div class="sub header">
+            Very low density lipoproteins
+        </div>
+    </div>
+
+    <div class="ui teal horizontal divider">
+        Risk factors
+    </div>
+    <div class="ui stackable eight column grid">
+        <div class="column">
+            <div class="ui huge green header">
+                {{form.ai}}
+                <div class="sub header">
+                    Atherosclerosis Index
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="ui huge green header">
+                {{form.aip}}
+                <div class="sub header">
+                    Atherogenic index of plasma (AIP)
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="ui huge green header">
+                {{form.cri_i}}
+                <div class="sub header">
+                    Castelli's risk index (CRI-I)
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="ui huge green header">
+                {{form.cri_ii}}
+                <div class="sub header">
+                    Castelli's risk index (CRI-II)
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="ui huge green header">
+                {{form.cri_ii}}
+                <div class="sub header">
+                    Atherogenic Coefficient (AC)
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 {% endblock %}
