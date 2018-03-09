@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: gunicorn atherogenic_risk.app:app
