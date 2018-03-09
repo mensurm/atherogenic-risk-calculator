@@ -1,6 +1,9 @@
-from atherogenic_risk import app
 from flask import render_template, request, redirect
 from atherogenic_risk.forms import PrimaryForm
+from flask import Flask
+
+
+app = Flask(__name__)
 
 
 @app.route('/')
