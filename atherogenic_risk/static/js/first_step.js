@@ -8,6 +8,14 @@
   }
 
   var validationRulesFemale = {
+    gender: {
+        identifier: 'gender',
+        rules: [
+        {
+            type: 'empty',
+            prompt: 'Please select patient gender'
+        }]
+    },
     total_cholesterol: {
         identifier: 'total_cholesterol',
         rules: [
@@ -65,6 +73,14 @@
 };
 
 var validationRulesMale = {
+    gender: {
+        identifier: 'gender',
+        rules: [
+        {
+            type: 'empty',
+            prompt: 'Please select patient gender'
+        }]
+    },
     total_cholesterol: {
         identifier: 'total_cholesterol',
         rules: [
