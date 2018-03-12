@@ -2,45 +2,54 @@
 {% block body %}
 
 <br>
+<div class="ui grid">
+    <div class="row">
+        <div class="one wide mobile three wide tablet five wide computer column"></div>
+        <div class="fourteen wide mobile ten wide tablet six wide computer column">
+            <form class="ui big error form" method="post" action="">
+                <div class="ui error message"></div>
+                {{ form.csrf }}
+                <p>
+                <div class="field">
+                    <label>Patient gender</label>
+                    <div class="ui dropdown selection gender">
+                        <input type="hidden" name="gender">
+                        <div class="default text">Select Gender</div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <div class="item" data-value="male">Male</div>
+                            <div class="item" data-value="female">Female</div>
+                        </div>
+                    </div>
+                </div>
 
-<form class="ui big error form" method="post" action="">
-    <div class="ui error message"></div>
-    {{ form.csrf }}
-    <p>
-    <div class="field">
-    <label>Patient gender</label>
-    <div class="ui dropdown selection gender">
-      <input type="hidden" name="gender">
-      <div class="default text">Select Gender</div>
-      <i class="dropdown icon"></i>
-      <div class="menu">
-        <div class="item" data-value="male">Male</div>
-        <div class="item" data-value="female">Female</div>
-      </div>
-    </div>
-  </div>
+                <div class="required field">
+                    <label>Total cholesterol (TC)</label>
+                    <input type="number" step="0.01" id="total_cholesterol" name="total_cholesterol"
+                           placeholder="[0 - 6.8] mmol/L">
+                </div>
+                <div class="required field">
+                    <label>Triglyceride (TG)</label>
+                    <input type="number" step="0.01" id="triglyceride" name="triglyceride"
+                           placeholder="[0 - 2.8] mmol/L">
+                </div>
+                <div class="required field">
+                    <label>High-density lipoproteins (HDL)</label>
+                    <input type="number" step="0.01" id="high_density_lipoproteins" name="high_density_lipoproteins"
+                           placeholder="[0.77 - 1.18 mmol/L]">
+                </div>
 
-    <div class="required field">
-        <label>Total cholesterol (TC)</label>
-        <input type="number" step="0.01" id="total_cholesterol" name="total_cholesterol" placeholder="[0 - 6.8] mmol/L">
-    </div>
-    <div class="required field">
-        <label>Triglyceride (TG)</label>
-        <input type="number" step="0.01" id="triglyceride" name="triglyceride" placeholder="[0 - 2.8] mmol/L">
-    </div>
-    <div class="required field">
-        <label>High-density lipoproteins (HDL)</label>
-        <input type="number" step="0.01" id="high_density_lipoproteins" name="high_density_lipoproteins"
-               placeholder="[0.77 - 1.18 mmol/L]">
-    </div>
+                </p>
+                <p>
+                    <button class="ui big positive button" type="submit">Calculate</button>
+                    <button class="ui clear big gray button" type="button">Clear</button>
+                </p>
 
-    </p>
-    <p>
-        <button class="ui big positive button" type="submit">Calculate</button>
-        <button class="ui clear big gray button" type="button">Clear</button>
-    </p>
-
-</form>
+            </form>
+        </div>
+        <div class="one wide mobile three wide tablet five wide computer column"></div>
+    </div>
+</div>
 
 <script type=text/javascript src="{{url_for('static', filename='js/first_step.js') }}"></script>
 
