@@ -50,3 +50,7 @@ class PrimaryForm(Form):
     def ac(self):
         return self.round((self.tc - self.hdl) / self.hdl)
 
+    @property
+    def chol_index(self):
+        return self.round(self.ldl - self.hdl)
+
