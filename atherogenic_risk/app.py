@@ -23,5 +23,14 @@ def submit_first_step():
     return render_template('second-step.html', form=form)
 
 
+@app.route('/about', methods=['GET'])
+def about():
+    return render_template('about.html')
+
+
+@app.route('/contact', methods=['GET'])
+def contact():
+    return render_template('contact.html')
+
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=8081)
